@@ -44,6 +44,8 @@ jobs:
 
     - name: Set up environment variables
       run: |
+        echo "DJANGO_SECRET_KEY=samplesecretkey"
+        echo "DJANGO_DEBUG=True"
         echo "DATABASE_URL=postgres://postgres:postgres@localhost:5432/test_db" >> .env
         echo "REDIS_URL=redis://localhost:6379/0" >> .env
 
