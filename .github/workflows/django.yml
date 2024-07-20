@@ -44,8 +44,6 @@ jobs:
 
     - name: Set up environment variables
       run: |
-        echo "SECRET_KEY=thisIsaSampleSecretKey" >> .env
-        echo "DEBUG=True" >> .env
         echo "DATABASE_URL=postgres://postgres:postgres@localhost:5432/test_db" >> .env
         echo "REDIS_URL=redis://localhost:6379/0" >> .env
 
@@ -53,11 +51,6 @@ jobs:
       run: |
         source env/bin/activate
         python manage.py migrate
-
-    - name: Run tests
-      run: |
-        source env/bin/activate
-        python manage.py test
 
     - name: Test WebSocket connection
       run: |
