@@ -61,7 +61,11 @@ jobs:
         sleep 5
         curl -v http://127.0.0.1:8000/
 
-    - name: Run server
+    - name: Start server and run checks
       run: |
         source env/bin/activate
-        python manage.py runserver 0.0.0.0:8000
+        nohup python manage.py runserver 0.0.0.0:8000 &
+        SERVER_PID=$!
+        sleep 10
+        curl -v http://127.0.0.1:8000/
+        kill $SERVER_PID
