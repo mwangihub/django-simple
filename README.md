@@ -32,8 +32,8 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/your-repository.git
-   cd your-repository
+   git clone https://github.com/mwangihub/django-simple.git
+   cd django-simple
    ```
 
 2. **Create a virtual environment and activate it:**
@@ -109,6 +109,3 @@ Feel free to fork the repository and submit pull requests. For issues or feature
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
-
-Feel free to customize any sections as needed!
